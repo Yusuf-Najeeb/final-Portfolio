@@ -93,7 +93,7 @@
                     >About</a
                   >
                   <a
-                    href="#project"
+                    href="#projects"
                     class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                     >Projects</a
                   >
@@ -113,23 +113,23 @@
           <div class="space-y-1 px-2 pb-3 pt-2">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
             <a
-              href="#"
+              href="#home"
               class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
               aria-current="page"
               >Home</a
             >
             <a
-              href="#"
+              href="#about"
               class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
               >About</a
             >
             <a
-              href="#"
+              href="#projects"
               class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
               >Projects</a
             >
             <a
-              href="#"
+              href="#testimonials"
               class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
               >Testimonials</a
             >
@@ -151,10 +151,7 @@
             </h1>
             <p class="mt-6 text-lg leading-8 text-gray-600">
               I'm software engineer who's passionate about leveraging technology
-              to create meaningful solutions. With hands-on experience in HTML,
-              CSS, and JavaScript, I thrive in building engaging web
-              applications that enhance user experiences and Seeking new
-              opportunities to create impactful digital products.
+              to create meaningful solutions.
             </p>
             <div
               class="mt-10 flex items-center justify-center md:justify-start gap-x-6"
@@ -175,7 +172,7 @@
             <img
               src="images/headShotColored.png"
               alt="Yusuf Muhammad Najeeb's profile"
-              class="w-full"
+              class="w-full rounded-full"
             />
           </div>
         </div>
@@ -223,17 +220,20 @@
                 <i class="fa-solid fa-computer"></i>&nbsp; Projects
             </button>
             <div class="flex flex-col md:flex-row md:gap-10 lg:gap-20">
-                <div class="relative">
+                <div class="relative my-8 md:my-14">
                     <div class="">
                       <img src="images/jarah.jpeg" alt="" class="w-full rounded-[1rem]" />
                     </div>
                     <div
                       class="flex flex-col text-center justify-end gap-6 text-dark font-bold bg-gradient-to-b from-transparent to-primary absolute bottom-0 right-0 left-0 h-[80%] pb-5 px-8 md:w-[100%]"
                     >
-                    <ul class="flex flex-col-reverse lg:flex-row justify-between text-white font-serif">
-                        <li>22 July 2023</li>
-                        <li>Muhammad Najeeb</li>
-                    </ul>
+                    <div class="mt-4 flex items-center justify-center space-x-3 text-base">
+                        <div class="font-semibold text-white">12 July, 23</div>
+                        <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="fill-gray-900">
+                          <circle cx="1" cy="1" r="1" />
+                        </svg>
+                        <div class="text-white">Muhammad Najeeb</div>
+                      </div>
                       <p class="font-mono text-2xl text-light">
                         Financial Institute
                       </p>
@@ -246,17 +246,20 @@
                     </div>
                 </div>
                    <!-- Second -->
-                <div class="relative">
+                <div class="relative my-8 md:my-14">
                     <div class="">
                     <img src="images/trafal.jpeg" alt="" class="w-full rounded-[1rem]" />
                     </div>
                     <div
                     class="flex flex-col text-center justify-end gap-6 text-dark font-bold bg-gradient-to-b from-transparent to-primary absolute bottom-0 right-0 left-0 h-[80%] pb-5 px-8 md:w-[100%]"
                     >
-                    <ul class="flex flex-row justify-between text-white font-serif">
-                        <li>12 March 2023</li>
-                        <li>Muhammad Najeeb</li>
-                    </ul>
+                    <div class="mt-4 flex items-center justify-center space-x-3 text-base">
+                        <div class="font-semibold text-white">17 February, 23</div>
+                        <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="fill-gray-900">
+                          <circle cx="1" cy="1" r="1" />
+                        </svg>
+                        <div class="text-white">Muhammad Najeeb</div>
+                      </div>
                     <p class="font-mono text-2xl text-light">
                         AI Mobile Clinic
                     </p>
@@ -269,17 +272,20 @@
                     </div>
                 </div>
                    <!-- Third -->
-                   <div class="relative">
+                   <div class="relative my-8 md:my-14">
                     <div class="">
                     <img src="images/jeebz.jpeg" alt="" class="w-full rounded-[1rem]" />
                     </div>
                     <div
                     class="flex flex-col text-center justify-end gap-6 text-dark font-bold bg-gradient-to-b from-transparent to-primary absolute bottom-0 right-0 left-0 h-[80%] pb-5 px-8 md:w-[100%]"
                     >
-                    <ul class="flex flex-row justify-between text-white font-serif">
-                        <li>18 July 2023</li>
-                        <li>Muhammad Najeeb</li>
-                    </ul>
+                    <div class="mt-4 flex items-center justify-center space-x-3 text-base">
+                        <div class="font-semibold text-white">15 July, 23</div>
+                        <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="fill-gray-900">
+                          <circle cx="1" cy="1" r="1" />
+                        </svg>
+                        <div class="text-white">Muhammad Najeeb</div>
+                      </div>
                     <p class="font-mono text-2xl text-light">
                         Hotel Website
                     </p>
@@ -295,9 +301,27 @@
         </div>
     </section>
     <!-- Testimonial Section -->
-    <section>
-
+    <section id="testimonials">
+        <div class="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:px-8">
+              <figure class="mt-10">
+                <blockquote class="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
+                  <p>“From the moment I landed on the homepage, I was impressed by the modern and intuitive design. The user-friendly interface made navigation a breeze, and I found everything I needed right at my fingertips. The attention to detail in crafting a seamless user journey truly sets your work apart.”</p>
+                </blockquote>
+                <figcaption class="mt-10">
+                  <img class="mx-auto h-10 w-10 rounded-full" src="images/headShot.png" alt="User profile picture">
+                  <div class="mt-4 flex items-center justify-center space-x-3 text-base">
+                    <div class="font-semibold text-gray-900">Muhammad Najeeb</div>
+                    <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="fill-gray-900">
+                      <circle cx="1" cy="1" r="1" />
+                    </svg>
+                    <div class="text-gray-600">TiideLab Intern</div>
+                  </div>
+                </figcaption>
+              </figure>
+            </div>
+        </div>
     </section>
+
     <script>
       tailwind.config = {
         theme: {
