@@ -10,6 +10,11 @@
       src="https://kit.fontawesome.com/5a1d47c6c2.js"
       crossorigin="anonymous"
     ></script>
+    <script
+    src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+    crossorigin="anonymous"
+  ></script>
     <title>Dev~Hero | Software Engineer</title>
   </head>
   <body id="home">
@@ -20,7 +25,7 @@
           <div class="relative flex flex-row h-16 items-center justify-between">
             <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
               <!-- Mobile menu button-->
-              <button
+              <button id="hamburger"
                 type="button"
                 class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
                 aria-controls="mobile-menu"
@@ -33,7 +38,7 @@
           
                       Menu open: "hidden", Menu closed: "block"
                     -->
-                <svg
+                <svg id="opened"
                   class="block h-6 w-6"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -52,7 +57,7 @@
           
                       Menu open: "block", Menu closed: "hidden"
                     -->
-                <svg
+                <svg id="closed"
                   class="hidden h-6 w-6"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -82,7 +87,6 @@
               </div>
               <div class="hidden sm:ml-6 sm:block">
                 <div class="flex space-x-4">
-                  <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                   <a
                     href="#home"
                     class="text-white hover:bg-gray-700 rounded-md px-3 py-2 text-sm font-medium"
@@ -104,6 +108,11 @@
                     class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                     >Testimonials</a
                   >
+                  <a
+                    href="#contact"
+                    class="bg-light hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                    >Contact Me</a
+                  >
                 </div>
               </div>
             </div>
@@ -111,7 +120,7 @@
         </div>
 
         <!-- Mobile menu, show/hide based on menu state. -->
-        <div class="sm:hidden" id="mobile-menu">
+        <div class="main" id="mobile_menu" style="display: none;">
           <div class="space-y-1 px-2 pb-3 pt-2">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
             <a
@@ -135,6 +144,11 @@
               class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
               >Testimonials</a
             >
+            <a
+              href="#contact"
+              class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+              >Contact Me</a
+            >
           </div>
         </div>
       </nav>
@@ -155,16 +169,16 @@
                 Possessing strong problem-solving and analytical skills, I thrive in dynamic and challenging environments, adapting strategies to meet evolving project needs
             </p>
             <div
-              class="mt-10 flex items-center justify-center md:justify-start gap-x-6"
+              class="mt-10 flex flex-col md:flex-row items-center justify-center md:justify-start gap-x-6"
             >
               <a
-                href="#"
-                class="rounded-md bg-dark px-3.5 py-2.5 text-md font-semibold text-white shadow-sm hover:bg-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                href="mailto:yusnaj21@gmail.com"
+                class="rounded-md bg-dark px-3.5 py-2.5 text-md font-semibold text-white shadow-sm hover:bg-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary my-3 md:my-0"
                 ><i class="fa-solid fa-user-plus"></i> Hire me</a
               >
               <a
-                href="#"
-                class="rounded-md bg-dark px-3.5 py-2.5 text-md font-semibold text-white shadow-sm hover:bg-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dark"
+                href="https://drive.google.com/file/d/1OI3vWRjZCIrZUM6ZLX9GAuV5CenPQzS0/view?usp=sharing"
+                class="rounded-md bg-dark px-3.5 py-2.5 text-md font-semibold text-white shadow-sm hover:bg-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dark my-3 md:my-0"
                 ><i class="fa-regular fa-file-pdf"></i> Download CV</a
               >
             </div>
@@ -182,15 +196,16 @@
     <!-- About Me Section -->
     <section id="about" class="bg-secondary">
         <div class="relative isolate px-6 pt-14 lg:px-8 text-center md:text-left">
+          <div class="w-full md:px-12 py-4 sm:py-14 lg:py-20">
             <button class="bg-dark rounded-full text-light py-2 px-4 my-3">
               <i class="fa-solid fa-wand-magic-sparkles"></i>&nbsp; About Me
             </button>
             <p
-              class="my-4 bg-primary py-4 px-3 text-light text-center text-2xl md:w-4/12 md:text-left"
+              class="my-4 bg-primary py-4 px-3 text-light text-center text-2xl md:w-6/12 lg:w-5/12 md:text-left"
             >
               Hi! I'm Muhammad Najeeb 👋...
             </p>
-            <p class="w-full md:w-4/5 text-dark text-[1.2rem] text-center md:text-left">
+            <p class="w-full text-dark text-[1.2rem] text-center md:text-left">
               I'm software engineer who's passionate about leveraging technology to
               create meaningful solutions. With hands-on experience in HTML, CSS,
               and JavaScript, I thrive in building engaging web applications that
@@ -198,25 +213,29 @@
               impactful digital products.
             </p>
           </div>
-          <div class="relative isolate px-6 py-14 lg:px-8 text-center md:text-left">
+          <div class="relative isolate px-6 md:px-12 pb-12 text-center md:text-left">
             <button class="bg-dark rounded-full text-light py-2 px-4 my-3">
               <i class="fa-solid fa-fill-drip"></i>&nbsp; Skills
             </button>
             <ul
-              class="flex flex-wrap justify-center space-x-3 text-[1.2rem] text-primary md:justify-start md:space-x-5"
+              class="flex flex-wrap justify-center items-center space-x-3 text-[1.2rem] text-primary md:justify-start md:space-x-5 h-full py-3 md:py-10"
             >
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-              <li>Tailwind</li>
-              <li>Git</li>
-              <li>Node.js</li>
+              <li class="flex-1 h-[50%]"><img class="w-full" src="images/html.png" alt="HTML logo"></li>
+              <li class="flex-1 h-[50%]"><img class="w-full" src="images/css.webp" alt="CSS logo"></li>
+              <li class="flex-1 h-[50%]"><img class="w-full" src="images/javascript.png" alt="javascript logo"></li>
+              <li class="flex-1 h-[50%]"><img class="w-full" src="images/taillwind.png" alt=""></li>
+              <li class="flex-1 h-[50%]"><img class="w-full" src="images/git.png" alt="Git logo"></li>
+              <li class="flex-1 h-[50%]"><img class="w-full" src="images/node.png" alt="Git logo"></li>
+              <li class="flex-1 h-[50%]"><img class="w-full" src="images/github.png" alt="github logo"></li>
+              <li class="flex-1 h-[50%]"><img class="w-full" src="images/react.png" alt="github logo"></li>
             </ul>
           </div>
+        </div>
     </section>
     <!-- Project Section -->
     <section id="projects" class="bg-primary">
         <div class="relative isolate px-6 py-14 lg:px-8 text-center md:text-left">
+          <div class="px-8 md:px-12">
             <button class="bg-secondary rounded-full text-dark py-2 px-4 my-5">
                 <i class="fa-solid fa-computer"></i>&nbsp; Projects
             </button>
@@ -228,7 +247,7 @@
                     <div
                       class="flex flex-col text-center justify-end gap-6 text-dark font-bold bg-gradient-to-b from-transparent to-primary absolute bottom-0 right-0 left-0 h-[80%] pb-5 px-8 md:w-[100%]"
                     >
-                    <div class="mt-4 flex items-center justify-center space-x-3 text-base">
+                    <div class="hidden md:inline-block mt-4 flex items-center justify-center space-x-3 text-base">
                         <div class="font-semibold text-white">12 July, 23</div>
                         <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="fill-gray-900">
                           <circle cx="1" cy="1" r="1" />
@@ -241,7 +260,7 @@
                       <a
                         href="https://jarah-jeebulla.vercel.app/"
                         target="_blank"
-                        class="bg-dark w-full lg:w-1/2 mx-auto text-1xl text-light py-2 px-4"
+                        class="bg-dark w-full mx-auto text-1xl text-light py-2 px-4"
                         >Visit website</a
                       >
                     </div>
@@ -254,7 +273,7 @@
                     <div
                     class="flex flex-col text-center justify-end gap-6 text-dark font-bold bg-gradient-to-b from-transparent to-primary absolute bottom-0 right-0 left-0 h-[80%] pb-5 px-8 md:w-[100%]"
                     >
-                    <div class="mt-4 flex items-center justify-center space-x-3 text-base">
+                    <div class="hidden md:inline-block mt-4 flex items-center justify-center space-x-3 text-base">
                         <div class="font-semibold text-white">17 February, 23</div>
                         <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="fill-gray-900">
                           <circle cx="1" cy="1" r="1" />
@@ -267,7 +286,7 @@
                     <a
                         href="https://helumai.onrender.com/"
                         target="_blank"
-                        class="bg-dark w-full lg:w-1/2 mx-auto text-1xl text-light py-2 px-4"
+                        class="bg-dark w-full mx-auto text-1xl text-light py-2 px-4"
                         >Visit website</a
                     >
                     </div>
@@ -280,7 +299,7 @@
                     <div
                     class="flex flex-col text-center justify-end gap-6 text-dark font-bold bg-gradient-to-b from-transparent to-primary absolute bottom-0 right-0 left-0 h-[80%] pb-5 px-8 md:w-[100%]"
                     >
-                    <div class="mt-4 flex items-center justify-center space-x-3 text-base">
+                    <div class="hidden md:inline-block mt-4 flex items-center justify-center space-x-3 text-base">
                         <div class="font-semibold text-white">15 July, 23</div>
                         <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="fill-gray-900">
                           <circle cx="1" cy="1" r="1" />
@@ -293,25 +312,27 @@
                     <a
                         href="https://jeebullahotel.vercel.app/"
                         target="_blank"
-                        class="bg-dark w-full lg:w-1/2 mx-auto text-1xl text-light py-2 px-4"
+                        class="bg-dark w-full  mx-auto text-1xl text-light py-2 px-4"
                         >Visit website</a
                     >
                     </div>
                 </div>
             </div>
+          </div>
         </div>
     </section>
     <!-- Testimonial Section -->
     <section id="testimonials">
-        <div class="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:px-8">
+        <div class="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 md:px-12">
+          <h3 class="text-center text-3xl font-bold">What our Customers are saying.</h3>
               <figure class="mt-10">
                 <blockquote class="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
                   <p>“From the moment I landed on the homepage, I was impressed by the modern and intuitive design. The user-friendly interface made navigation a breeze, and I found everything I needed right at my fingertips. The attention to detail in crafting a seamless user journey truly sets your work apart.”</p>
                 </blockquote>
                 <figcaption class="mt-10">
-                  <img class="mx-auto h-10 w-10 rounded-full" src="images/headShot.png" alt="User profile picture">
+                  <img class="mx-auto h-10 w-10 rounded-full" src="images/img7.jpeg" alt="User profile picture">
                   <div class="mt-4 flex items-center justify-center space-x-3 text-base">
-                    <div class="font-semibold text-gray-900">Muhammad Najeeb</div>
+                    <div class="font-semibold text-gray-900">Khadijah Oyedunmade D.</div>
                     <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="fill-gray-900">
                       <circle cx="1" cy="1" r="1" />
                     </svg>
@@ -324,20 +345,20 @@
     </section>
     <!-- Footer Section -->
     <section id="contact" class="bg-dark">
-        <div class="relative isolate overflow-hidden px-6 sm:py-32 lg:px-8 text-center md:text-left">
+        <div class="relative isolate overflow-hidden py-10 px-6 lg:px-8 text-center md:text-left">
             <div class="flex flex-col md:flex-col text-light">
                 <div class="flex flex-col md:flex-row justify-between gap-6">
                     <div class="mt-6 text-lg leading-8 text-light">
-                        <h3 class="py-2">Phone: +(234)81-0547-5021</h3>
-                        <h3 class="py-2">Address:Abuja, Nigeria.</h3>
-                        <h3 class="py-2">Email:yusnaj21@gmail.com</h3>
+                        <h3 class="py-1">Phone: +(234)81-0547-5021</h3>
+                        <h3 class="py-1">Address: Abuja, Nigeria.</h3>
+                        <h3 class="py-1">Email: yusnaj21@gmail.com</h3>
                     </div>
                     <div class="mt-6 text-lg leading-8 text-light">
-                        <p>Subscribe to my newsletter</p>
-                        <p class="w-full lg:w-[80%]">The latest news, articles, and resources, sent to your inbox weekly.</p>
+                        <p class="font-bold">Subscribe to my Newsletter</p>
+                        <p class="w-full lg:w-[80%]"> To get the latest news, articles, and resources, sent to your inbox weekly.</p>
                         <form action="">
-                            <input class="rounded-md border p-2 mr-3 my-4 text-dark" type="text" name="mail" id="mail" placeholder="Enter your email address">
-                            <button class="bg-primary text-light p-3 rounded-xl">Subscribe</button>
+                            <input class="outline-none rounded-md border p-2 mr-3 my-2 text-dark" type="text" name="mail" id="mail" placeholder="Enter your email address">
+                            <button class="bg-primary text-light p-2 rounded-xl">Subscribe</button>
                         </form>
                     </div>
                 </div>
@@ -371,5 +392,6 @@
         },
       };
     </script>
+    <script src="main.js"></script>
   </body>
 </html>
