@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<htm class="scroll-smooth">
+<html class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,8 +23,8 @@
   </head>
   <body id="home">
     <!-- Header Section -->
-    <header class="sticky top-0 z-10">
-      <nav class="bg-gray-800">
+    <header class="sticky top-0 z-10 inset-x-0 inset-y-0">
+      <nav class="bg-gray-800 relative">
         <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
           <div class="relative flex flex-row h-16 items-center justify-between">
             <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -124,7 +124,7 @@
         </div>
 
         <!-- Mobile menu, show/hide based on menu state. -->
-        <div class="main" id="mobile_menu" style="display: none;">
+        <div class="main absolute -top-[250px] bg-[#141E27] opacity-70 inset-x-0 transform duration-1000" id="mobile_menu">
           <div class="space-y-1 px-2 pb-3 pt-2">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
             <a
@@ -151,7 +151,7 @@
             <a
               href="#contact"
               class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-              >Contact Me</a
+              >Contact&nbsp;Me</a
             >
           </div>
         </div>
@@ -209,7 +209,7 @@
             >
               Hi! I'm Muhammad Najeeb 👋...
             </p>
-            <p class="w-full text-dark text-[1.2rem] text-center md:text-left">
+            <p class="w-full md:w-[70%] text-dark text-[1.2rem] text-center md:text-left">
               I'm software engineer who's passionate about leveraging technology to
               create meaningful solutions. With hands-on experience in HTML, CSS,
               and JavaScript, I thrive in building engaging web applications that
@@ -369,7 +369,7 @@
                 <hr class="mt-20 mb-5">
                 <div class="flex flex-col-reverse md:flex-row justify-between px-5 md:px-12">
                     <div class="my-5">
-                        <p>© 2020 Dev~Hero, Inc. All rights reserved.</p>
+                        <p>© 2023 Dev~Hero, Inc. All rights reserved.</p>
                     </div>
                     <div class="space-x-4 text-3xl">
                         <a class="hover:text-secondary" target="_blank" href="https://twitter.com/_jeebullah?s=11"><i class="fa-brands fa-twitter"></i></a>
